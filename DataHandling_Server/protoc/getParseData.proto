@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = ".;service";
+
+service Service{
+    // 通过精确的账户名获得数据
+    rpc GetData(DataRequest_User) returns (DataResponse_User) {}   
+}
+
+message DataRequest_User{
+    string requestName = 1;
+}
+
+message DataResponse_User{
+    string requestName = 1;
+}
